@@ -349,6 +349,8 @@
 /* fops->iterate() is available */
 #define HAVE_VFS_ITERATE 1
 
+#define HAVE_ITER_FOPS 1
+
 /* fops->readdir() is available */
 /* #undef HAVE_VFS_READDIR */
 
