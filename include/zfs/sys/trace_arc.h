@@ -24,7 +24,7 @@
 #if defined(_KERNEL) && defined(HAVE_DECLARE_EVENT_CLASS)
 
 #undef TRACE_SYSTEM
-#define	TRACE_SYSTEM zfs
+#define	TRACE_SYSTEM zfs_arc
 
 #if !defined(_TRACE_ARC_H) || defined(TRACE_HEADER_MULTI_READ)
 #define	_TRACE_ARC_H

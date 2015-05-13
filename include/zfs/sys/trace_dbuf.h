@@ -22,7 +22,7 @@
 #if defined(_KERNEL) && defined(HAVE_DECLARE_EVENT_CLASS)
 
 #undef TRACE_SYSTEM
-#define	TRACE_SYSTEM zfs
+#define	TRACE_SYSTEM zfs_dbuf
 
 #if !defined(_TRACE_DBUF_H) || defined(TRACE_HEADER_MULTI_READ)
 #define	_TRACE_DBUF_H
