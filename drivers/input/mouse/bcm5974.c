@@ -664,7 +664,7 @@ static int bcm5974_wellspring_mode(struct bcm5974 *dev, bool on)
 	char *data;
 
 	/* Type 3 does not require a mode switch */
-	if (dev->cfg.tp_type == TYPE3)
+	if (c->tp_type == TYPE3)
 		return 0;
 
 	data = kmalloc(c->um_size, GFP_KERNEL);
@@ -687,7 +687,11 @@ static int bcm5974_wellspring_mode(struct bcm5974 *dev, bool on)
 	}
 
 	/* apply the mode switch */
-	data[0] = on ? c->um_switch_on : c->um_switch_off;
+	if (c->tp_type == TYPE4) {
+		data[1] = on ? c->um_switch_on : c->um_switch_off;
+	} else {
+		data[0] = on ? c->um_switch_on : c->um_switch_off;
+	}
 
 	/* write configuration */
 	size = usb_control_msg(dev->udev, usb_sndctrlpipe(dev->udev, 0),
