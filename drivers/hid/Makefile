@@ -26,6 +26,7 @@ ifdef CONFIG_LOGIWII_FF
 	hid-logitech-y	+= hid-lg4ff.o
 endif
 
+obj-$(CONFIG_HID_ILITEK_TOUCH)	+= ilitek_lumv3_8_0.o
 obj-$(CONFIG_HID_A4TECH)	+= hid-a4tech.o
 obj-$(CONFIG_HID_ACRUX)		+= hid-axff.o
 obj-$(CONFIG_HID_APPLE)		+= hid-apple.o

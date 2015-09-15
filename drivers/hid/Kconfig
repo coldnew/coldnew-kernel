@@ -76,6 +76,12 @@ source "drivers/hid/usbhid/Kconfig"
 menu "Special HID drivers"
 	depends on HID
 
+config HID_ILITEK_TOUCH
+	tristate "ILITEK touch controller support"
+	depends on USB_HID
+	---help---
+	Support for gatchi onlaptop
+
 config HID_A4TECH
 	tristate "A4 tech mice" if EXPERT
 	depends on USB_HID
